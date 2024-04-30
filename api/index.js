@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import userRoutes from './routes/user.route.js';
 
 dotenv.config();
 
@@ -13,6 +14,12 @@ console.log('Connected');
 
 const app=express();
 
-app.listen(300,()=>{
+app.listen(3000,()=>{
     console.log('Server listening!!');
 });
+
+
+
+//Path api/index.js
+
+app.use('/api/user', userRoutes);
