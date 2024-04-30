@@ -5,18 +5,20 @@ import Profile from './pages/Profile'
 import About from './pages/About'
 import SignIn from './pages/SignIn'
 import Home from './pages/Home'
+import Header from './components/Header'
 
 function App() {
   return (
     <BrowserRouter>
+    <Header></Header>
     <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/about' element={<About/>}></Route>
-      <Route path='sign-in' element={<SignIn/>}></Route>
+      <Route path='/sign-in' element={<SignIn/>}></Route>
       <Route path='/sign-up' element={<SignUp/>}></Route>
       <Route path='/profile' element={<Profile/>}></Route>
     </Routes>
-    {/* <h1 className="text-3xl font-bold underline">App</h1> */}
+   
     </BrowserRouter>
   )
 }
